@@ -15,7 +15,7 @@
 
     <form>
         <label for = 'entradaMensagem'></label>
-        <input type="text" name="entradaMensagem" id="entradaMensagem" placeholder="Escreva aqui"> <br>
+        <input type="text" id="entradaMensagem" placeholder="Escreva aqui"> <br>
 
         <select id='opçoes'>
             <option value="Escolha Aqui">Escolha Aqui</option>
@@ -24,15 +24,15 @@
         </select>
 
         
-                <input type="number" id="incremento" placeholder="SEU NÚMERO"><br>
+                <input type="number" id="incremento" placeholder="SEU NÚMERO" min="1" max="25"><br>
         
         <div class='radio'>
-            <input type="radio" id='codificar' name='radio-Cesar' value="codificar" >
+            <input type="radio" id='codificar' name='radio-Cesar' value="radioCodificar"  checked>
             <label for = 'codificar' id='labelcodificar'> Codificar </label> <br>
 
             <br>
 
-            <input type="radio" id='decodificar' name='radio-Cesar' value="decodificar">
+            <input type="radio" id='decodificar' name='radio-Cesar' value="radioecodificar"  checked>
             <label for = 'codificar' id='labeldecodificar'> Decodificar </label> <br>
         </div>
 

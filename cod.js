@@ -1,11 +1,14 @@
 var entradaMensagem = document.getElementById('entradaMensagem');
-var opçoes = document.getElementById('opçoes');
+var opçoes = document.querySelector('#opçoes');
 var incremento = document.getElementById('incremento');
 var btncodificar = document.getElementById('codificar');
 var btndecodificar = document.getElementById('decodificar');
 var alfabeto = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
 var submit = document.querySelector('#submit');
 var saidaMensagem = document.querySelector('.saidaMensagem')
+var radioCodificar = document.querySelector('#radioCodificar');
+var radioDecodificar = document.getElementById('radioDecodificar')
+var radio = document.querySelector('.radio');
 
 
 opçoes.addEventListener("change", function () {
@@ -38,14 +41,14 @@ opçoes.addEventListener("change", function () {
  })
 
 
-/*  //Funções
+/
 
-   1 - Código de Cesar//  */
+
 
 function codCesar() {
   var elementoDaMensagem = entradaMensagem.value;
-  var mensagemMinuscula = elementoDaMensagem.toLowerCase()
-  var transformarNumero = (Number(incremento.value) % 26)
+  var mensagemMinuscula = elementoDaMensagem.toLowerCase();
+  var transformarNumero = (Number(incremento.value) % 26);
   var mensagemCodificada = '';
 
   for(var i = 0; i < mensagemMinuscula.length; i++){
@@ -87,15 +90,23 @@ return mensagemCodificada
   return mensagemCodificada
 }
   
+
+/* Base64 */
+
 function codBase(){
-    var elementoDaMensagem = entradaMensagem.value;
-    return btoa(elementoDaMensagem);
+    let mensagem = document.querySelector('#entradaMensagem').value
+    let codificado = btoa(mensagem)
+    return codificado
 }
 
+
 function decBase(){
-    var elementoDaMensagem = entradaMensagem.value;
-    return atob(elementoDaMensagem);
+    let mensagem = document.querySelector('#entradaMensagem').value
+    let decodificado = atob(mensagem)
+    return decodificado
 }
+
+
 
 
 
@@ -103,23 +114,22 @@ function decBase(){
 
 submit.addEventListener('click', function(e){
     e.preventDefault();
-    
-    if(opçoes.value === "base64"){
-        if(submit.value === "Codifica!"){
-           
-            saidaMensagem.innerText = codBase();
-            
-        }else{
-            
-            saidaMensagem.innerText = decBase();
-        }
-    }else if(opçoes.value === "cifraDeCesar"){
-        if(saidaMensagem.value === "Codifica!"){
-            saidaMensagem.innerText = codCesar();
-            
-        }else{
-            
-            saidaMensagem.innerText = decCesar();
-        }
+    if(btncodificar.checked && opçoes.value === "base64"){
+        
+        saidaMensagem.innerText = codBase();
+    } else if(btndecodificar.checked && opçoes.value === "base64"){
+        
+        saidaMensagem.innerText = decBase();
+    } else if(btncodificar.checked && opçoes.value === "cifraDeCesar"){
+        
+        saidaMensagem.innerText = codCesar()
+    } else if(btndecodificar.checked && opçoes.value === "cifraDeCesar"){
+        
+        saidaMensagem.innerText = decCesar()
+    } else{
+        saidaMensagem.innerText = " "
     }
-});
+})
+
+
+
