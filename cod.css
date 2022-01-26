@@ -1,13 +1,140 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    width:100vh;
+    background: linear-gradient(45deg, #8C3063,#6756A6, #8C876D);
+    background-size: 300%, 300%;
+    animation: color 10s ease infinite;
+    font-family: ROMAN SD;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+      }
+    50% {
+        background-position: 100% 50%;
+     }
+    100% {
+        background-position: 0%,50%
+    }
+}
+
+header {
+    display:flex;
+    align-items: center;
+}
+
+#titulo {
+    
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 40px;
+    color: #2C2F40;
+    margin-top: 150px;
+}
+
+form {
+    border: #8EA65B solid 25px;
+    background-color: #2C2F40;
+    border-radius: 50px;
+    height: 500px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#opçoes {
+    width: 250px;
+    height: 50px;
+    background-color: #8C3063;
+    border: blueviolet solid 2px;
+    color: #8EA65B;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: ROMAN SD;
+}
 
 
-
-
-
+#entradaMensagem {
+    width: 350px;
+    height: 80px;
+    background-color: #8C3063;
+    border: blueviolet solid 2px;
+    color: #8EA65B;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: ROMAN SD;
+    margin-top: 102px;
+}
 
 #incremento {
     display:none;
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    background-color: #8C3063;
+    border: blueviolet solid 2px;
+    color: #8EA65B;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: ROMAN SD;
 }
 
 #submit {
     display:none;
+    color: #8EA65B;
+    font-weight: bold;
+    background-color: #8C3063;
+    font-size: 20px;
+
+}
+
+#labelcodificar {
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    color: #8EA65B;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: ROMAN SD;
+    margin-bottom: 10px;
+}
+
+
+#labeldecodificar {
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    color: #8EA65B;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: ROMAN SD;
+    margin-bottom: 10px;
+
+}
+
+.saidaMensagem {
+    color: #8EA65B;
+    font-size: 20px;
+    font-family: ROMAN SD;
+}
+
+footer {
+    font-family: BEBAS;
+    font-size: 20px;
+    color: #8EA65B;
+    margin-top: 30px;
 }

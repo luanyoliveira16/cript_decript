@@ -10,12 +10,12 @@
 
 <body>
     <header>
-         <h1>Codificação & Decoficação</h1>
+         <h1 id="titulo">Codificação & Decoficação</h1>
     </header>
 
     <form>
         <label for = 'entradaMensagem'></label>
-        <input type="text" name="entradaMensagem" id="entradaMensagem" placeholder="Mensagem"> <br>
+        <input type="text" name="entradaMensagem" id="entradaMensagem" placeholder="Escreva aqui"> <br>
 
         <select id='opçoes'>
             <option value="Escolha Aqui">Escolha Aqui</option>
@@ -24,14 +24,16 @@
         </select>
 
         
-                <input type="number" id="incremento" placeholder="Digite um número ou escolha nas setas"><br>
+                <input type="number" id="incremento" placeholder="SEU NÚMERO"><br>
         
         <div class='radio'>
-            <input type="radio" id='codificar' name='radio-Cesar' value="codificar" checked>
-            <label for = 'codificar'> Codificar </label> <br>
+            <input type="radio" id='codificar' name='radio-Cesar' value="codificar" >
+            <label for = 'codificar' id='labelcodificar'> Codificar </label> <br>
 
-            <input type="radio" id='decodificar' name='radio-Cesar' value="decodificar" checked>
-            <label for = 'codificar'> Decodificar </label> <br>
+            <br>
+
+            <input type="radio" id='decodificar' name='radio-Cesar' value="decodificar">
+            <label for = 'codificar' id='labeldecodificar'> Decodificar </label> <br>
         </div>
 
         <div>
@@ -40,9 +42,14 @@
 
         <input type="submit" value="Codifica!" id="submit">
         <input type="submit" value="Decodifica!" id="submit">
-            
+        
+        
+       
     </form>
 
+    <footer>© Luany Oliveira - 2022</footer>
+
+    
     <script src='cod.js'></script>
 </body>
 </html>
