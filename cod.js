@@ -41,9 +41,10 @@ opçoes.addEventListener("change", function () {
  })
 
 
-/
+/*  //Funções
 
-
+   1 - Cifra de Cesar//  */
+   
 
 function codCesar() {
   var elementoDaMensagem = entradaMensagem.value;
@@ -99,15 +100,11 @@ function codBase(){
     return codificado
 }
 
-
 function decBase(){
-    let mensagem = document.querySelector('#entradaMensagem').value
+    let mensga = document.querySelector('#entradaMensagem').value
     let decodificado = atob(mensagem)
     return decodificado
 }
-
-
-
 
 
 
@@ -127,9 +124,36 @@ submit.addEventListener('click', function(e){
         
         saidaMensagem.innerText = decCesar()
     } else{
-        saidaMensagem.innerText = " "
+        saidaMensagem.innerText = "Ops...Digite novamente."
     }
 })
+
+
+
+
+
+/* submit.addEventListener('click', function(e){
+    e.preventDefault();
+    
+    if(opçoes.value === "base64"){
+        if(submit.value === "Codifica!"){
+           
+            saidaMensagem.innerText = codBase();
+            
+        }else{
+            
+            saidaMensagem.innerText = decBase();
+        }
+    }else if(opçoes.value === "cifraDeCesar"){
+        if(saidaMensagem.value === "Codifica!"){
+            saidaMensagem.innerText = codCesar();
+            
+        }else{
+            
+            saidaMensagem.innerText = decCesar();
+        }
+    }
+}); */
 
 
 
