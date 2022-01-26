@@ -78,7 +78,7 @@ return mensagemCodificada
     for(var i = 0; i < mensagemMinuscula.length; i++){
        for(var j = alfabeto.length - 1; j >= 0; j--){
          if(mensagemMinuscula[i] == alfabeto[j]){
-           mensagemCodificada += alfabeto [j + transformarNumero]
+           mensagemCodificada += alfabeto [j - transformarNumero]
            break;
        } else if (mensagemMinuscula[i] == ' ') {
            mensagemCodificada += ' ';
