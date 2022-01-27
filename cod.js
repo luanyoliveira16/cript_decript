@@ -101,7 +101,7 @@ function codBase(){
 }
 
 function decBase(){
-    let mensga = document.querySelector('#entradaMensagem').value
+    let mensagem = document.querySelector('#entradaMensagem').value
     let decodificado = atob(mensagem)
     return decodificado
 }
@@ -132,28 +132,7 @@ submit.addEventListener('click', function(e){
 
 
 
-/* submit.addEventListener('click', function(e){
-    e.preventDefault();
-    
-    if(opçoes.value === "base64"){
-        if(submit.value === "Codifica!"){
-           
-            saidaMensagem.innerText = codBase();
-            
-        }else{
-            
-            saidaMensagem.innerText = decBase();
-        }
-    }else if(opçoes.value === "cifraDeCesar"){
-        if(saidaMensagem.value === "Codifica!"){
-            saidaMensagem.innerText = codCesar();
-            
-        }else{
-            
-            saidaMensagem.innerText = decCesar();
-        }
-    }
-}); */
+
 
 
 
